@@ -9,19 +9,19 @@
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
 
   :root {
-    --bg: #0d0f11;
-    --surface: #151820;
-    --surface-2: #1c2028;
-    --text: #e0e0e0;
-    --text-secondary: #8a8f98;
-    --accent: #4fd1c5;
+    --bg: #f8f7f4;
+    --surface: #ffffff;
+    --surface-2: #f0eeeb;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --accent: #1a6b5a;
     --accent-dim: #2a9d8f;
-    --warm: #e07a5f;
-    --warm-dim: rgba(224, 122, 95, 0.15);
-    --gold: #d4a843;
-    --gold-dim: rgba(212, 168, 67, 0.12);
-    --border: #252830;
-    --border-accent: rgba(79, 209, 197, 0.2);
+    --warm: #b5432a;
+    --warm-dim: rgba(181, 67, 42, 0.08);
+    --gold: #8a6d1b;
+    --gold-dim: rgba(138, 109, 27, 0.08);
+    --border: #ddd;
+    --border-accent: rgba(26, 107, 90, 0.2);
     --max-width: 760px;
     --radius: 6px;
   }
@@ -33,7 +33,7 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -61,17 +61,17 @@
   h1 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 1.35;
     margin-bottom: 6px;
     letter-spacing: -0.3px;
-    color: #fff;
+    color: var(--text);
   }
 
   .subtitle {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
     margin-bottom: 12px;
     font-style: italic;
@@ -90,7 +90,7 @@
   h2 {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 56px;
@@ -113,10 +113,10 @@
   h3 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 28px;
     margin-bottom: 12px;
-    color: #fff;
+    color: var(--text);
   }
 
   p {
@@ -128,8 +128,9 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 20px 24px;
+    padding: 24px 28px;
     margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
 
   .card-accent {
@@ -157,30 +158,30 @@
   }
 
   .card h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: #fff;
+    color: var(--text);
     margin-bottom: 4px;
   }
 
   .card .role {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--accent);
     margin-bottom: 8px;
   }
 
   .card p {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
     margin-bottom: 6px;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   .card a {
-    color: var(--accent-dim);
+    color: var(--accent);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .card a:hover { text-decoration: underline; }
@@ -213,12 +214,12 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   th {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -237,7 +238,7 @@
 
   td:first-child {
     color: var(--text-secondary);
-    font-size: 13px;
+    font-size: 15px;
     white-space: nowrap;
     width: 140px;
   }
@@ -245,7 +246,7 @@
   /* Org chart */
   .org-tree {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.8;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -257,7 +258,7 @@
     color: var(--text-secondary);
   }
 
-  .org-tree .name { color: #fff; font-weight: 500; }
+  .org-tree .name { color: var(--text); font-weight: 500; }
   .org-tree .title-text { color: var(--accent); }
   .org-tree .you { color: var(--warm); font-weight: 500; }
 
@@ -287,7 +288,7 @@
   }
 
   .stat-label {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.4;
   }
@@ -304,7 +305,7 @@
     margin-bottom: 16px;
     padding-left: 36px;
     position: relative;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .play-list li::before {
@@ -313,7 +314,7 @@
     left: 0;
     top: 1px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--accent);
     background: var(--surface);
@@ -348,27 +349,28 @@
 
   .vocab-term {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--accent);
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
 
   .vocab-def {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.5;
   }
 
   /* Blockquote */
   blockquote {
-    border-left: 2px solid var(--accent-dim);
+    border-left: 3px solid var(--accent);
     margin: 20px 0;
-    padding: 12px 20px;
+    padding: 16px 24px;
     background: var(--surface);
     border-radius: 0 var(--radius) var(--radius) 0;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-secondary);
     font-style: italic;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   blockquote strong { color: var(--text); font-style: normal; }
@@ -386,12 +388,12 @@
 
   /* Lists */
   ul { margin-bottom: 14px; padding-left: 20px; }
-  li { margin-bottom: 6px; font-size: 15px; }
+  li { margin-bottom: 8px; font-size: 17px; }
 
   /* Tool table */
   .tool-table td:first-child {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--accent);
     width: 180px;
   }
@@ -415,7 +417,7 @@
     border-radius: var(--radius);
     padding: 16px 20px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .warn-box .label {
@@ -457,7 +459,7 @@
 
 <p>Behind the "Humans x Machines" branding, this is a <strong>Workforce Strategies Senior Consultant</strong> in Deloitte's OWC practice. The day-to-day project types:</p>
 
-<div style="columns: 2; column-gap: 24px; margin-bottom: 20px; font-size: 14px;">
+<div style="columns: 2; column-gap: 24px; margin-bottom: 20px; font-size: 16px;">
   <ul style="padding-left: 16px;">
     <li>Career Planning Framework</li>
     <li>Diversity, Equity &amp; Inclusion</li>
@@ -594,7 +596,7 @@
   </div>
 </div>
 
-<p style="font-size: 14px; color: var(--text-secondary);">The gap between "this is important" (66%) and "we're leading" (6%) = the consulting opportunity this role exists to serve.</p>
+<p style="font-size: 16px; color: var(--text-secondary);">The gap between "this is important" (66%) and "we're leading" (6%) = the consulting opportunity this role exists to serve.</p>
 
 <h3>The Framework: Hardwiring vs. Softwiring</h3>
 
@@ -634,7 +636,7 @@
 <div class="warn-box">
   <div class="label">Title Overhaul in Progress</div>
   <p>Deloitte is <strong>completely overhauling job titles</strong> for all 181,500 US employees, effective <strong>June 1, 2026</strong>. Under the new system:</p>
-  <ul style="margin-top: 8px; font-size: 14px;">
+  <ul style="margin-top: 8px; font-size: 16px;">
     <li>Senior Consultant becomes level <strong>L45</strong> with a job family suffix (e.g., "Senior Consultant, Workforce Strategies")</li>
     <li>Manager becomes <strong>L55</strong></li>
     <li>A new <strong>"Leaders"</strong> tier joins Partners, Principals, and Managing Directors</li>
@@ -648,20 +650,20 @@
 
 <ol class="play-list">
   <li>
-    <strong style="color: #fff;">Michael Griffiths (Best Shot)</strong><br>
-    <span style="color: var(--text-secondary); font-size: 14px;">He owns the OWC practice. Active on LinkedIn with open profile messages. <strong>The play:</strong> Engage with his HCTrends posts first &mdash; comment something substantive about skills-based organizations, not "Great post!" Then DM referencing the specific role, the Humans x Machines framing, and the hardwiring/softwiring framework. Name-drop the European telecom case.</span>
+    <strong style="color: var(--text);">Michael Griffiths (Best Shot)</strong><br>
+    <span style="color: var(--text-secondary); font-size: 16px;">He owns the OWC practice. Active on LinkedIn with open profile messages. <strong>The play:</strong> Engage with his HCTrends posts first &mdash; comment something substantive about skills-based organizations, not "Great post!" Then DM referencing the specific role, the Humans x Machines framing, and the hardwiring/softwiring framework. Name-drop the European telecom case.</span>
   </li>
   <li>
-    <strong style="color: #fff;">David Mallon (Thought Leadership Path)</strong><br>
-    <span style="color: var(--text-secondary); font-size: 14px;">The intellectual architect of "Humans x Machines." Also has open profile messages. Less likely to hire directly but will forward strong candidates. <strong>The play:</strong> Engage with Capital H podcast content. Frame yourself as someone who thinks about human-AI interaction design, not just workforce strategy.</span>
+    <strong style="color: var(--text);">David Mallon (Thought Leadership Path)</strong><br>
+    <span style="color: var(--text-secondary); font-size: 16px;">The intellectual architect of "Humans x Machines." Also has open profile messages. Less likely to hire directly but will forward strong candidates. <strong>The play:</strong> Engage with Capital H podcast content. Frame yourself as someone who thinks about human-AI interaction design, not just workforce strategy.</span>
   </li>
   <li>
-    <strong style="color: #fff;">Recruiter Direct</strong><br>
-    <span style="color: var(--text-secondary); font-size: 14px;">Laurie Davis (Talent Acquisition Leader) hires for this exact level and practice area. A clean application + LinkedIn message referencing the posting is the conventional path. Also: Jenn Wiseman, Elizabeth Julian.</span>
+    <strong style="color: var(--text);">Recruiter Direct</strong><br>
+    <span style="color: var(--text-secondary); font-size: 16px;">Laurie Davis (Talent Acquisition Leader) hires for this exact level and practice area. A clean application + LinkedIn message referencing the posting is the conventional path. Also: Jenn Wiseman, Elizabeth Julian.</span>
   </li>
   <li>
-    <strong style="color: #fff;">Peer Connection (Raleigh)</strong><br>
-    <span style="color: var(--text-secondary); font-size: 14px;">Leilani Figueras &mdash; current OWC consultant in Raleigh-Durham. Moved to the practice in Sept 2025, so she's recent enough to remember the hiring process. Natural networking contact if you have any Triangle connections.</span>
+    <strong style="color: var(--text);">Peer Connection (Raleigh)</strong><br>
+    <span style="color: var(--text-secondary); font-size: 16px;">Leilani Figueras &mdash; current OWC consultant in Raleigh-Durham. Moved to the practice in Sept 2025, so she's recent enough to remember the hiring process. Natural networking contact if you have any Triangle connections.</span>
   </li>
 </ol>
 
@@ -707,7 +709,7 @@
 
 <h3>Stats to Drop Casually</h3>
 
-<div class="card" style="font-size: 14px;">
+<div class="card" style="font-size: 16px;">
   <p>"I saw that only <strong>14% of leaders</strong> feel adept at shaping human-AI interactions &mdash; that gap is where I want to work."</p>
   <p>"The <strong>2x ROI finding</strong> when orgs prioritize work design over tech implementation really resonated with my experience."</p>
   <p style="margin-bottom: 0;">"The 59% tech-focused vs. intentional design finding maps to what I've seen at [personal example]."</p>
@@ -715,7 +717,7 @@
 
 <h3>Questions to Ask Them</h3>
 
-<div class="card" style="font-size: 14px;">
+<div class="card" style="font-size: 16px;">
   <ul>
     <li>"How is the OWC practice evolving the Workforce Analyzer and OrgTwin tools? Are Senior Consultants involved in shaping those products or primarily deploying them?"</li>
     <li>"With the title restructuring effective June 1, how is the team thinking about career pathing within OWC?"</li>
@@ -726,7 +728,7 @@
 
 <h3>Red Flags to Navigate</h3>
 
-<div class="card card-warm" style="font-size: 14px;">
+<div class="card card-warm" style="font-size: 16px;">
   <ul>
     <li><strong>50% travel</strong> is significant. Be prepared to discuss this honestly &mdash; it's a filter.</li>
     <li><strong>"Limited immigration sponsorship may be available"</strong> &mdash; they might sponsor but it's not guaranteed.</li>
@@ -738,7 +740,7 @@
 <!-- ============================================ -->
 <h2>Sources</h2>
 
-<div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+<div style="font-size: 15px; color: var(--text-secondary); line-height: 2;">
   <a href="https://www.linkedin.com/jobs/view/4387609817" target="_blank">LinkedIn Job Posting</a><br>
   <a href="https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html" target="_blank">2026 Global Human Capital Trends</a><br>
   <a href="https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/human-ai-interaction-design.html" target="_blank">Getting Human and Machine Relationships Right (Chapter 1)</a><br>
